@@ -1,0 +1,21 @@
+/* app.component.css */
+
+body {
+  font-family: Arial;
+}
+
+.active {
+  color: white;
+  background: green;
+  padding: 8px;
+}
+
+.inactive {
+  color: white;
+  background: gray;
+  padding: 8px;
+}
+
+hr {
+  margin: 20px 0;
+}

@@ -1,0 +1,14 @@
+<main style="max-width: 960px; margin: 1rem auto; font-family: Arial, sans-serif;">
+  <h1>Angular Routing Mastery</h1>
+  <p>Examples for routing and forms learning tracks, including lazy-loaded feature areas.</p>
+
+  <nav style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1rem;">
+	<a routerLink="/routing" routerLinkActive="active">Home</a>
+	<a routerLink="/users" routerLinkActive="active">Dynamic Params</a>
+	<a routerLink="/catalog" routerLinkActive="active">Child Routes</a>
+	<a routerLink="/admin" routerLinkActive="active">Lazy Route</a>
+  <a routerLink="/forms" routerLinkActive="active">Forms Mastery</a>
+  </nav>
+
+  <router-outlet></router-outlet>
+</main>

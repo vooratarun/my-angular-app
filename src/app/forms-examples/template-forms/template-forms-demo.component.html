@@ -1,0 +1,45 @@
+<section class="panel">
+  <h3>Template-driven Forms</h3>
+  <p>Validation is mostly declared in the template using directives like <code>required</code>.</p>
+
+  <form #templateForm="ngForm" (ngSubmit)="submit(templateForm)">
+    <label>
+      Full Name
+      <input
+        name="fullName"
+        [(ngModel)]="model.fullName"
+        #fullName="ngModel"
+        required
+        minlength="3"
+        placeholder="Enter full name" />
+    </label>
+    <p *ngIf="fullName.invalid && fullName.touched" class="error">
+      Name is required and must be at least 3 characters.
+    </p>
+
+    <label>
+      Email
+      <input
+        name="email"
+        [(ngModel)]="model.email"
+        #email="ngModel"
+        required
+        email
+        placeholder="Enter email" />
+    </label>
+    <p *ngIf="email.invalid && email.touched" class="error">Enter a valid email address.</p>
+
+    <label>
+      Topic
+      <select name="topic" [(ngModel)]="model.topic">
+        <option value="Template Forms">Template Forms</option>
+        <option value="Reactive Forms">Reactive Forms</option>
+      </select>
+    </label>
+
+    <button type="submit">Submit Template Form</button>
+  </form>
+
+  <p><strong>Status:</strong> {{ submitMessage }}</p>
+</section>
+

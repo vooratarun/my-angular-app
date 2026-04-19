@@ -1,0 +1,57 @@
+<!-- app.component.html -->
+
+<h1>Angular Directives Demo</h1>
+
+<!-- ngModel -->
+<h2>1. ngModel</h2>
+<input type="text" [(ngModel)]="username" placeholder="Enter your name">
+<p>Hello {{ username }}</p>
+
+<hr>
+
+<!-- ngIf -->
+<h2>2. ngIf</h2>
+<button (click)="showMessage = !showMessage">
+  Toggle Message
+</button>
+
+<p *ngIf="showMessage">Welcome to Angular!</p>
+
+<hr>
+
+<!-- ngFor -->
+<h2>3. ngFor</h2>
+<ul>
+  <li *ngFor="let fruit of fruits; let i = index">
+    {{ i + 1 }} - {{ fruit }}
+  </li>
+</ul>
+
+<hr>
+
+<!-- ngClass -->
+<h2>4. ngClass</h2>
+<button (click)="isActive = !isActive">Toggle Style</button>
+
+<p [ngClass]="{
+    active: isActive,
+    inactive: !isActive
+}">
+  Dynamic class using ngClass
+</p>
+
+<hr>
+
+<!-- ngStyle -->
+<h2>5. ngStyle</h2>
+
+<label>Rating:</label>
+<input type="range" min="1" max="5" [(ngModel)]="rating">
+
+<p [ngStyle]="{
+    color: rating >= 4 ? 'green' : 'red',
+    'font-size.px': 12 + rating * 2,
+    'font-weight': rating >= 4 ? '700' : '400'
+}">
+  Rating: {{ rating }}
+</p>

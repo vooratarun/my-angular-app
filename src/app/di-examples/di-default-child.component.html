@@ -1,0 +1,12 @@
+<article class="panel">
+  <h3>Child A (inherits parent providers)</h3>
+  <p data-testid="default-provider-label"><strong>Provider label:</strong> {{ providerLabel }}</p>
+  <p data-testid="default-singleton-id"><strong>Singleton id:</strong> {{ singletonId }}</p>
+  <p data-testid="default-scoped-id"><strong>Scoped id:</strong> {{ scopedId }}</p>
+  <p data-testid="default-scoped-count"><strong>Scoped count:</strong> {{ scopedCount }}</p>
+  <p data-testid="default-shared-message"><strong>Shared message:</strong> {{ sharedMessage }}</p>
+
+  <button type="button" (click)="incrementScopedCounter()">Increment scoped counter</button>
+  <button type="button" (click)="sendMessage()">Update shared message</button>
+</article>
+

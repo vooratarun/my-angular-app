@@ -1,0 +1,12 @@
+<article class="panel">
+  <h3>Child B (overrides providers)</h3>
+  <p data-testid="override-provider-label"><strong>Provider label:</strong> {{ providerLabel }}</p>
+  <p data-testid="override-singleton-id"><strong>Singleton id:</strong> {{ singletonId }}</p>
+  <p data-testid="override-scoped-id"><strong>Scoped id:</strong> {{ scopedId }}</p>
+  <p data-testid="override-scoped-count"><strong>Scoped count:</strong> {{ scopedCount }}</p>
+  <p data-testid="override-shared-message"><strong>Shared message:</strong> {{ sharedMessage }}</p>
+
+  <button type="button" (click)="incrementScopedCounter()">Increment scoped counter</button>
+  <button type="button" (click)="sendMessage()">Update shared message</button>
+</article>
+

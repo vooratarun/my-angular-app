@@ -1,0 +1,28 @@
+<section class="demo-shell">
+  <h2>Angular Services + Dependency Injection</h2>
+  <p>This section demonstrates services, singleton services, inject(), providers, and DI hierarchy.</p>
+
+  <h3>Service topics (from CourseCatalogService)</h3>
+  <ul>
+    <li *ngFor="let topic of topics">{{ topic }}</li>
+  </ul>
+
+  <article class="panel parent-panel">
+    <h3>Parent DI context</h3>
+    <p data-testid="parent-provider-label"><strong>Provider label:</strong> {{ providerLabel }}</p>
+    <p data-testid="parent-singleton-id"><strong>Singleton id:</strong> {{ singletonId }}</p>
+    <p data-testid="parent-scoped-id"><strong>Scoped id:</strong> {{ scopedId }}</p>
+    <p data-testid="parent-scoped-count"><strong>Scoped count:</strong> {{ scopedCount }}</p>
+    <p data-testid="parent-shared-message"><strong>Shared message:</strong> {{ sharedMessage }}</p>
+
+    <input [(ngModel)]="sharedMessageInput" placeholder="Update shared singleton message" />
+    <button type="button" (click)="setSharedMessage()">Set shared message</button>
+    <button type="button" (click)="incrementScopedCounter()">Increment parent scoped counter</button>
+  </article>
+
+  <div class="children-grid">
+    <app-di-default-child></app-di-default-child>
+    <app-di-override-child></app-di-override-child>
+  </div>
+</section>
+

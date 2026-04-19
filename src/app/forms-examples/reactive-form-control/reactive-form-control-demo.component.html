@@ -1,0 +1,21 @@
+<section class="panel">
+  <h3>Reactive Forms - FormControl</h3>
+  <p>
+    This example uses one <code>FormControl</code> with built-in validators and a custom domain validator.
+  </p>
+
+  <label>
+    Work Email
+    <input [formControl]="emailControl" placeholder="user@company.com" />
+  </label>
+
+  <p *ngIf="emailControl.hasError('required') && emailControl.touched" class="error">Email is required.</p>
+  <p *ngIf="emailControl.hasError('email') && emailControl.touched" class="error">Email format is invalid.</p>
+  <p *ngIf="emailControl.hasError('forbiddenDomain') && emailControl.touched" class="error">
+    Domain {{ emailControl.getError('forbiddenDomain').domain }} is not allowed.
+  </p>
+
+  <button type="button" (click)="submitControl()">Submit FormControl</button>
+  <p><strong>Status:</strong> {{ submitMessage }}</p>
+</section>
+

@@ -57,3 +57,68 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 ## Additional Resources
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+## Templates and Directives Examples
+
+This project now includes hands-on examples in `src/app/template-examples/` for:
+
+- Interpolation
+- Property binding
+- Event binding
+- Two-way binding with `[(ngModel)]`
+- `*ngIf`
+- `*ngFor`
+- `ngClass`
+- `ngStyle`
+
+Open the app and scroll to the **Angular Templates + Directives Demo** section to try each one.
+
+## Services and Dependency Injection Examples
+
+This project now includes examples in `src/app/di-examples/` for:
+
+- Services (`CourseCatalogService`)
+- Singleton services (`SelectionService` with `providedIn: 'root'`)
+- `inject()` API usage inside standalone components
+- `providers` at component level
+- DI hierarchy (parent provider inheritance vs child provider override)
+
+Open the app and scroll to the **Angular Services + Dependency Injection** section to explore how parent and child components resolve providers.
+
+## Angular Routing Mastery Examples
+
+This project now includes router-focused examples in `src/app/router-examples/` that cover:
+
+- `RouterOutlet`
+- `Routes`
+- Dynamic route params (example: `/users/:id`)
+- Child routes (example: `/catalog` with nested outlet)
+- Lazy loading (example: `/admin` loaded via `loadChildren`)
+
+Key routes to try:
+
+- `/routing`
+- `/users`
+- `/users/777`
+- `/catalog`
+- `/catalog/keyboard`
+- `/admin`
+- `/admin/settings`
+
+## Angular Forms Mastery Examples
+
+This project now includes form-focused examples in `src/app/forms-examples/` that cover:
+
+- Template Forms
+- Reactive Forms (priority examples)
+- `FormControl`
+- `FormGroup`
+- Built-in `Validators`
+- Custom validators
+
+The forms section is lazy-loaded under `/forms` and split into separate route modules:
+
+- `/forms/template`
+- `/forms/reactive-control`
+- `/forms/reactive-group`
+

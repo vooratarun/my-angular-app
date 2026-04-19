@@ -1,0 +1,13 @@
+<section>
+  <h2>{{ title() }}</h2>
+
+  <p>Choose one item and send it to sibling B through a shared service:</p>
+
+  <ul>
+    @for (item of items(); track item) {
+      <li>
+        <button type="button" (click)="selectItem(item)">{{ item }}</button>
+      </li>
+    }
+  </ul>
+</section>

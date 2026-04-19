@@ -1,0 +1,83 @@
+<section class="panel">
+  <h3>Reactive Forms - FormGroup (Important)</h3>
+  <p>
+    This example uses <code>FormGroup</code> with multiple <code>FormControl</code> values,
+    built-in validators, and a custom password match validator.
+  </p>
+
+  <form [formGroup]="profileForm" (ngSubmit)="submitGroup()">
+    <label>
+      Full Name
+      <input formControlName="fullName" placeholder="John Doe" />
+    </label>
+    <p *ngIf="profileForm.controls.fullName.invalid && profileForm.controls.fullName.touched" class="error">
+      Full name is required (min 3 chars).
+    </p>
+
+    <label>
+      Email
+      <input formControlName="email" placeholder="john@company.com" />
+    </label>
+    <p *ngIf="profileForm.controls.email.hasError('required') && profileForm.controls.email.touched" class="error">
+      Email is required.
+    </p>
+    <p *ngIf="profileForm.controls.email.hasError('email') && profileForm.controls.email.touched" class="error">
+      Email format is invalid.
+    </p>
+    <p *ngIf="profileForm.controls.email.hasError('forbiddenDomain') && profileForm.controls.email.touched" class="error">
+      Domain {{ profileForm.controls.email.getError('forbiddenDomain').domain }} is not allowed.
+    </p>
+
+    <label>
+      Job Title
+      <input formControlName="jobTitle" placeholder="Frontend Developer" />
+    </label>
+    <p *ngIf="profileForm.controls.jobTitle.invalid && profileForm.controls.jobTitle.touched" class="error">
+      Job title is required (min 3 chars).
+    </p>
+
+    <label>
+      Phone (10 digits)
+      <input formControlName="phone" placeholder="9876543210"  type="number"/>
+    </label>
+    <p *ngIf="profileForm.controls.phone.hasError('required') && profileForm.controls.phone.touched" class="error">
+      Phone is required.
+    </p>
+    <p *ngIf="profileForm.controls.phone.hasError('pattern') && profileForm.controls.phone.touched" class="error">
+      Phone must be exactly 10 digits.
+    </p>
+
+    <label>
+      Experience (years)
+      <input type="number" formControlName="experienceYears" min="0" max="40" />
+    </label>
+    <p
+      *ngIf="
+        (profileForm.controls.experienceYears.hasError('min') ||
+          profileForm.controls.experienceYears.hasError('max')) &&
+        profileForm.controls.experienceYears.touched
+      "
+      class="error">
+      Experience must be between 0 and 40 years.
+    </p>
+
+    <label>
+      Password
+      <input type="password" formControlName="password" />
+    </label>
+
+    <label>
+      Confirm Password
+      <input type="password" formControlName="confirmPassword" />
+    </label>
+
+    <p *ngIf="profileForm.hasError('passwordMismatch') && profileForm.controls.confirmPassword.touched" class="error">
+      Password and confirm password must match.
+    </p>
+
+    <button type="submit">Submit FormGroup</button>
+  </form>
+
+  <p><strong>Status:</strong> {{ submitMessage }}</p>
+</section>
+

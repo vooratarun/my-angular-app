@@ -1,0 +1,57 @@
+<section class="demo-shell">
+  <h1>{{ appName }}</h1>
+  <p><strong>Interpolation:</strong> Welcome, {{ username }}.</p>
+
+  <h2>Property Binding</h2>
+  <img
+    [src]="profileImageUrl"
+    [alt]="username + ' profile image'"
+    [title]="'Image bound using [src] and [alt]'"
+    width="64"
+    height="64" />
+
+  <h2>Event Binding</h2>
+  <button type="button" (click)="toggleLogin()">Toggle Login</button>
+  <p>{{ statusMessage }}</p>
+
+  <h2>Two-way Binding</h2>
+  <input [(ngModel)]="newProduct" placeholder="Type a product" />
+  <button type="button" (click)="addProduct()" [disabled]="!newProduct.trim()">Add Product</button>
+
+  <h2>*ngIf</h2>
+  <p *ngIf="isLoggedIn; else loggedOut">You can now access member features.</p>
+  <ng-template #loggedOut>
+    <p>Please log in to access member features.</p>
+  </ng-template>
+
+  <h2>*ngFor</h2>
+  <ul>
+    <li *ngFor="let product of products; let i = index">
+      {{ i + 1 }}. {{ product }}
+      <button type="button" (click)="removeProduct(i)">Remove</button>
+    </li>
+  </ul>
+
+  <h2>ngClass</h2>
+  <p
+    [ngClass]="{
+      highlighted: isHighlighted,
+      normal: !isHighlighted
+    }">
+    This text changes classes with ngClass.
+  </p>
+  <button type="button" (click)="toggleHighlight()">Toggle ngClass Style</button>
+
+  <h2>ngStyle</h2>
+  <label for="rating">Rating: </label>
+  <input id="rating" type="range" min="1" max="5" [(ngModel)]="rating" />
+  <p
+    [ngStyle]="{
+      color: textColor,
+      'font-size.px': 12 + rating * 2,
+      'font-weight': rating >= 4 ? '700' : '400'
+    }">
+    This text updates style using ngStyle. Current rating: {{ rating }}
+  </p>
+</section>
+
