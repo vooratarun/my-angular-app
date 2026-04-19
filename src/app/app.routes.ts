@@ -66,6 +66,16 @@ export const routes: Routes = [
 	  ),
   },
   {
+	path: 'performance',
+	loadChildren: () =>
+	  import('./performance-examples/performance.routes').then((m) => m.PERFORMANCE_ROUTES),
+  },
+  {
+	path: 'data-binding',
+	loadChildren: () =>
+	  import('./data-binding-examples/data-binding.routes').then((m) => m.DATA_BINDING_ROUTES),
+  },
+  {
 	path: '**',
 	redirectTo: 'routing',
   },

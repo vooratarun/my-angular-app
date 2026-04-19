@@ -76,5 +76,27 @@ describe('app routes', () => {
     expect(Array.isArray(lazyRoutes)).toBe(true);
     expect(lazyRoutes.some((route) => route.path === '')).toBe(true);
   });
+
+  it('includes lazy loaded performance route', async () => {
+    const performanceRoute = routes.find((route) => route.path === 'performance');
+    expect(typeof performanceRoute?.loadChildren).toBe('function');
+
+    const lazyResult = await performanceRoute?.loadChildren?.();
+    const lazyRoutes = Array.isArray(lazyResult) ? (lazyResult as Routes) : [];
+
+    expect(Array.isArray(lazyRoutes)).toBe(true);
+    expect(lazyRoutes.some((route) => route.path === '')).toBe(true);
+  });
+
+  it('includes lazy loaded data-binding route', async () => {
+    const bindingRoute = routes.find((route) => route.path === 'data-binding');
+    expect(typeof bindingRoute?.loadChildren).toBe('function');
+
+    const lazyResult = await bindingRoute?.loadChildren?.();
+    const lazyRoutes = Array.isArray(lazyResult) ? (lazyResult as Routes) : [];
+
+    expect(Array.isArray(lazyRoutes)).toBe(true);
+    expect(lazyRoutes.some((route) => route.path === '')).toBe(true);
+  });
 });
 

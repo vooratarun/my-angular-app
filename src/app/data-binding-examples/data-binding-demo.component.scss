@@ -1,0 +1,23 @@
+.panel {
+  border: 1px solid #cbd5e1;
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+h4 {
+  margin-top: 1rem;
+  margin-bottom: 0.35rem;
+}
+
+button {
+  margin-right: 0.5rem;
+}
+
+.active {
+  font-weight: 700;
+}
+
+.inactive {
+  opacity: 0.75;
+}
+

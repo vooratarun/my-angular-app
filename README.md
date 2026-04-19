@@ -186,3 +186,34 @@ Routes to try:
 - `/state-management/signals-state`
 - `/state-management/ngrx-basics`
 
+## Angular Performance + Optimization Examples
+
+This project now includes performance-focused examples in `src/app/performance-examples/` that cover:
+
+- Lazy loading
+- `ChangeDetectionStrategy.OnPush`
+- `trackBy` in `*ngFor`
+- Standalone Components
+- Code splitting with `loadChildren` and `loadComponent`
+
+Routes to try:
+
+- `/performance/onpush`
+- `/performance/trackby`
+- `/performance/code-splitting`
+
+## Angular Data Binding Examples
+
+This project now includes data-binding examples in `src/app/data-binding-examples/` that cover:
+
+- Interpolation
+- Property binding
+- Event binding
+- Two-way binding
+- Class, style, and attribute binding
+
+Routes to try:
+
+- `/data-binding`
+- `/data-binding/all`
+

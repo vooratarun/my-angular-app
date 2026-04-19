@@ -22,6 +22,8 @@ import { RouterLink } from '@angular/router';
         <li><a routerLink="/signals">Signals examples</a></li>
         <li><a routerLink="/auth">Guards and auth examples</a></li>
         <li><a routerLink="/state-management">State management examples</a></li>
+        <li><a routerLink="/performance">Performance examples</a></li>
+        <li><a routerLink="/data-binding">Data binding examples</a></li>
       </ul>
     </section>
   `,

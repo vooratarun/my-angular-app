@@ -1,0 +1,29 @@
+<section class="panel">
+  <h3>{{ title }}</h3>
+
+  <h4>Interpolation</h4>
+  <p>Hello, {{ username }}!</p>
+
+  <h4>Property + Attribute Binding</h4>
+  <img
+    [src]="imageUrl"
+    [alt]="username"
+    [attr.aria-label]="ariaLabel"
+    width="64"
+    height="64" />
+  <input [placeholder]="inputPlaceholder" [disabled]="isDisabled" />
+
+  <h4>Event Binding</h4>
+  <button type="button" (click)="increment()">Clicked {{ count }} times</button>
+  <button type="button" (click)="toggleActive()">Toggle Active</button>
+
+  <h4>Two-way Binding</h4>
+  <input [(ngModel)]="username" />
+  <p>Live value: {{ username }}</p>
+
+  <h4>Class + Style Binding</h4>
+  <p [class.active]="isActive" [class.inactive]="!isActive">Class binding example</p>
+  <p [style.color]="isActive ? 'green' : 'gray'">Style binding example</p>
+  <p [style.width.%]="progress">Width style binding ({{ progress }}%)</p>
+</section>
+
