@@ -122,3 +122,67 @@ The forms section is lazy-loaded under `/forms` and split into separate route mo
 - `/forms/reactive-control`
 - `/forms/reactive-group`
 
+## Angular HTTP + APIs Examples
+
+This project now includes API-focused examples in `src/app/http-examples/` using JSONPlaceholder.
+
+Covered topics:
+
+- `HttpClient`
+- `GET`, `POST`, `PUT`, `DELETE`
+- HTTP interceptors
+- Error handling
+
+Routes for CRUD examples:
+
+- `/http-api/get`
+- `/http-api/post`
+- `/http-api/put`
+- `/http-api/delete`
+
+## Angular Signals (Modern Angular) Examples
+
+This project now includes signals-focused examples in `src/app/signals-examples/` that cover:
+
+- `signal()`
+- `computed()`
+- `effect()`
+- Cart Counter using signals
+
+Routes for signals examples:
+
+- `/signals/signal`
+- `/signals/computed`
+- `/signals/effect`
+- `/signals/cart-counter`
+
+## Angular Guards + Auth Examples
+
+This project now includes auth-focused examples in `src/app/auth-examples/` that cover:
+
+- Auth Guard
+- Route Guard behavior
+- JWT login flow (simulated)
+- Token storage in `localStorage`
+- Protected Dashboard example
+
+Routes to try:
+
+- `/auth/login`
+- `/auth/dashboard` (guard-protected)
+
+## Angular State Management Examples
+
+This project now includes state-management examples in `src/app/state-management-examples/` covering:
+
+- Service state (BehaviorSubject)
+- Signals state (`signal`, `computed`)
+- NgRx basics (optional conceptual overview)
+- Mini Ecommerce Cart implementation
+
+Routes to try:
+
+- `/state-management/service-state`
+- `/state-management/signals-state`
+- `/state-management/ngrx-basics`
+

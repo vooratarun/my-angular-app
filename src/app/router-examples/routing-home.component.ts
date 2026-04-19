@@ -18,6 +18,10 @@ import { RouterLink } from '@angular/router';
         <li><a routerLink="/catalog">Child routes example</a></li>
         <li><a routerLink="/admin">Lazy loading example</a></li>
         <li><a routerLink="/forms">Forms mastery examples</a></li>
+        <li><a routerLink="/http-api">HTTP and APIs examples</a></li>
+        <li><a routerLink="/signals">Signals examples</a></li>
+        <li><a routerLink="/auth">Guards and auth examples</a></li>
+        <li><a routerLink="/state-management">State management examples</a></li>
       </ul>
     </section>
   `,

@@ -47,6 +47,25 @@ export const routes: Routes = [
 	loadChildren: () => import('./forms-examples/forms.routes').then((m) => m.FORMS_ROUTES),
   },
   {
+	path: 'http-api',
+	loadChildren: () => import('./http-examples/http.routes').then((m) => m.HTTP_ROUTES),
+  },
+  {
+	path: 'signals',
+	loadChildren: () => import('./signals-examples/signals.routes').then((m) => m.SIGNALS_ROUTES),
+  },
+  {
+	path: 'auth',
+	loadChildren: () => import('./auth-examples/auth.routes').then((m) => m.AUTH_ROUTES),
+  },
+  {
+	path: 'state-management',
+	loadChildren: () =>
+	  import('./state-management-examples/state-management.routes').then(
+		(m) => m.STATE_MANAGEMENT_ROUTES,
+	  ),
+  },
+  {
 	path: '**',
 	redirectTo: 'routing',
   },
