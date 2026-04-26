@@ -1,0 +1,53 @@
+<!-- title-description.component.html -->
+<div class="modal-overlay">
+  <div class="modal-container">
+
+    <!-- Header -->
+    <div class="modal-header">
+      <h2>Airbnb your home</h2>
+      <button class="close-btn">&times;</button>
+    </div>
+
+    <!-- Body -->
+    <div class="modal-body">
+      <h1>Now, let's give your house a title and description</h1>
+      <p>
+        Short titles work best. Have fun with it you can change it anytime
+      </p>
+
+      <form [formGroup]="listingForm">
+
+        <!-- Title -->
+        <div class="form-group">
+          <input
+            type="text"
+            placeholder="desc"
+            formControlName="title"
+          />
+        </div>
+
+        <!-- Description -->
+        <div class="form-group">
+          <textarea
+            rows="6"
+            placeholder="summary"
+            formControlName="description"
+          ></textarea>
+        </div>
+
+      </form>
+    </div>
+
+    <!-- Footer -->
+    <div class="modal-footer">
+      <button class="back-btn">Back</button>
+      <button
+        class="next-btn"
+        [disabled]="listingForm.invalid"
+      >
+        Next
+      </button>
+    </div>
+
+  </div>
+</div>

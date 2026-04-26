@@ -1,0 +1,123 @@
+/* title-description.component.scss */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.modal-overlay {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-container {
+  width: 1135px;
+  max-width: 95%;
+  background: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+}
+
+/* Header */
+.modal-header {
+  height: 70px;
+  padding: 0 24px;
+  border-bottom: 1px solid #e5e5e5;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.modal-header h2 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #253047;
+}
+
+.close-btn {
+  border: none;
+  background: transparent;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* Body */
+.modal-body {
+  padding: 36px 20px 40px;
+}
+
+.modal-body h1 {
+  font-size: 52px;
+  line-height: 1.1;
+  color: #414a5d;
+  font-weight: 700;
+  max-width: 900px;
+}
+
+.modal-body p {
+  margin-top: 12px;
+  color: #6b7280;
+  font-size: 22px;
+}
+
+.form-group {
+  margin-top: 26px;
+}
+
+input,
+textarea {
+  width: 100%;
+  border: 1px solid #d5d5d5;
+  border-radius: 8px;
+  padding: 18px;
+  font-size: 30px;
+  outline: none;
+}
+
+textarea {
+  resize: none;
+  min-height: 145px;
+  font-size: 22px;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #000;
+}
+
+/* Footer */
+.modal-footer {
+  border-top: 1px solid #e5e5e5;
+  padding: 18px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.back-btn {
+  border: none;
+  background: transparent;
+  font-size: 32px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.next-btn {
+  background: #222;
+  color: white;
+  border: none;
+  padding: 14px 28px;
+  font-size: 30px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.next-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
